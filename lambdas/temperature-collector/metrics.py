@@ -32,9 +32,9 @@ def put(location_name, outside_temperature, thermostat_data):
             append_metric('CoolSetpoint', 'Downstairs', downstairs_thermostat['coolsetpoint'])
     if upstairs_thermostat:
         append_metric('Temperature', 'Upstairs', upstairs_thermostat['temperature'])
-        if 'heatsetpoint' in downstairs_thermostat:
+        if 'heatsetpoint' in upstairs_thermostat:
             append_metric('HeatSetpoint', 'Upstairs', upstairs_thermostat['heatsetpoint'])
-        if 'coolsetpoint' in downstairs_thermostat:
+        if 'coolsetpoint' in upstairs_thermostat:
             append_metric('CoolSetpoint', 'Upstairs', upstairs_thermostat['coolsetpoint'])
     _log.info(f'Metric parameters: {params}')
     cloudwatch = boto3.client('cloudwatch')
