@@ -2,7 +2,8 @@
 
 An AWS Lambda function that collects data from my thermostats and corresponding outdoor
 temperatures. It polls two different thermostat technologies, a Honeywell Gateway and a
-Google Nest, as well as the OpenWeather API.
+Google Nest, as well as the OpenWeather API. It's used to monitor conditions at
+[The Grey Haven](https://airbnb.com/h/the-grey-haven), an Airbnb in Lake Arrowhead, California.
 
 
 ## Prerequisites
